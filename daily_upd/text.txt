@@ -1,13 +1,14 @@
 
 Hello!
 Today is date_today
+
 Time now: date_time
 
 Temperature in city_name is weather_temperature
+
 Today you can expect weather_status
 
 Exchange rates for today:
-
     1.00 USD = usd_rub_rate RUB
     1000 AMD = amd_usd_rate USD
     1000 AMD = amd_rub_rate RUB

@@ -26,11 +26,14 @@ def convert_currency(from_currency: str, to_currency: str, amount: float) -> flo
         'base_currency': from_currency,
         'currencies': to_currency
     }
-    response = requests.get(API_ENDPOINT_1, params=query_params)
-    currency_data = response.json()
-    exchange_rate = currency_data['data'][to_currency]['value']
-    exchanged_value = exchange_rate * amount
-    return exchanged_value
+    try:
+        response = requests.get(API_ENDPOINT_1, params=query_params)
+        currency_data = response.json()
+        exchange_rate = currency_data['data'][to_currency]['value']
+        exchanged_value = exchange_rate * amount
+        return exchanged_value
+    except:
+        return 666
 
 
 # Fetch today's weather from OpenWeatherAPI
